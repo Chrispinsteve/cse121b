@@ -1,4 +1,4 @@
-/* LESSON 3 - Programming Tasks */
+LESSON 3 - Programming Tasks */
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
