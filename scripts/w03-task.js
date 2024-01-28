@@ -62,7 +62,7 @@ function getTotal() {
         subTotal = subTotal - subTotal * 0.2; 
     }
 
-    document.getElementById("total").textContent = subTotal.toFixed(2)
+    document.getElementById("total").textContent = `$${subTotal.toFixed(2)}`
 }
 
 document.querySelector("#getTotal").addEventListener("click", getTotal);
