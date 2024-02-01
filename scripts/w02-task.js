@@ -32,7 +32,7 @@ let newFood = ' Honey';
 favFoods.push(newFood);
 foodElement.innerHTML += `<br>${favFoods}`;
 favFoods.shift([0])
-foodElement.innerHTML += `<br>${favFoods.join('<br>')}`;
+foodElement.innerHTML += `<br>${favFoods}`;
 
 
 
