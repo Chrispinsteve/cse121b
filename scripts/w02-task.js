@@ -33,9 +33,5 @@ favFoods.push(newFood);
 foodElement.innerHTML += `<br>${favFoods}`;
 favFoods.shift([0])
 foodElement.innerHTML += `<br>${favFoods}`;
-
-
-
-
-
-
+favFoods.pop([-1])
+foodElement.innerHTML += `<br>${favFoods}`;
