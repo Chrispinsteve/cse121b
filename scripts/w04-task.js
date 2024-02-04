@@ -49,7 +49,7 @@ photoElement.alt = myProfile.photo.alt;
 
 /* Favorite Foods List*/
 myProfile.favoriteFoods.forEach(item => {
-    let li = document.createElement("li"); // Fix: Use "li" instead of "#li"
+    let li = document.createElement("li");
     li.textContent =  item;
     document.querySelector("#favorite-foods").appendChild(li);
 });
