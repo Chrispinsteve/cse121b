@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stai Spacial</title>
-    <!--Custom Link-->  
-    <link rel="stylesheet"  type="text/css"  href="styles/style.css">
-   
+    <!--Custom Link-->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+
     <!--Boxicone Link-->
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
     <!--Remixicone-->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
@@ -17,37 +17,125 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <img src="images/STAI-PLANET.png" alt="" width="144">
 
-        <ul class="navlist">
-            <li><a href="#">Planets</a></li>
-            <li><a href="#">Satelites</a></li>
-            <li><a href="#">Stars</a></li>
-            <li><a href="#">Galaxies</a></li>
-        </ul>
+        <div class="searchbar">
+            <form action="https://www.google.com/search" method="get" class="search-Bar">
+                <input placeholder="Search..." type="text" name="q" id="searchBar">
+                <button type="submit"><img src="images/bx-search-alt.svg" alt=""></button>
+            </form>
+        </div>
 
-        <div class="bx-menu" id="menu-icone"></div>
+
+    <div class="container">
+        <!-- Filterd Buttons -->
+        <div class="filter_buttons">
+            <button data-name="all">All</button>
+            <button data-name="mercure">Mercure</button>
+            <button data-name="venus">Venus</button>
+            <button data-name="earth">Earth</button>
+            <button data-name="mars">Mars</button>
+            <button data-name="jupiter">Jupiter</button>
+            <button data-name="uranus">Uranus</button>
+            <button data-name="moon">Moon</button>
+            <button data-name="neptune">Nepturne</button>
+            <button data-name="nasa">NASA</button>
+
+        </div>
+            
     </header>
 
     <section class="hero">
-        <div class="hero-text">
-            <h5>#2 Trending</h5>
-            <h4>Lead Supercell</h4>
-            <h1>Adventure</h1>
-            <p>Follow all the planets that you know by making a<br>
-                travel inter galaxic, joy with the Stars and Galaxies </p>
-            <a href="#" class="ctaa"><i class="ri-play-fill"></i>Watch the Universe</a>
-            <a href="#" class="ct">Watch</a>
-        </div>
+<!--------------------------------Images Cards------------------------------------------------->
+        <div class="filterable_cards">
+            
+            <div class="card" data-name="mercure">
+                <img src="images/mercury.png" alt="" width="270">
+                <div class="card_body" id="mercure">
+                    <h1 class="card_title">MERCURE</h1>
+                    <p class="card_text">Mercury is the smallest planet in our solar system and the closest to the Sun.
+                        <br>It has a rocky surface and no atmosphere to speak of, experiencing extreme temperature variations.</p>
+                </div>
+            </div>
 
-        <div class="hero-img">
-            <img src="images/alien.png" alt="" width="300">
+            <div class="card" data-name="venus">
+                <img src="images/venus.png" alt="" width="400">
+                <div class="card_body" id="venus">
+                    <h1 class="card_title">VENUS</h1>
+                    <p class="card_text">Venus is often called Earth's sister planet due to its similar size and composition. 
+                        <br>It has a thick atmosphere composed mainly of carbon dioxide, causing a runaway greenhouse effect, making it the hottest planet in our solar system.</p>
+                </div>
+            </div>
+            
+            <div class="card" data-name="earth">
+                <img src="images/earth.png" alt="" width="300">
+                <div class="card_body" id="earth">
+                    <h1 class="card_title">EARTH</h1>
+                    <p class="card_text">Earth is the third planet from the Sun in our solar system. It is the only known planet to<br>
+                        support life. Earth's atmosphere is composed mainly of nitrogen and oxygen. Its surface is approximately<br> 
+                        71% water, with the rest being landmasses. Earth has a diverse range of ecosystems, climates, and geographical<br>
+                        features, making it a unique and vibrant planet in the cosmos.</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="mars">
+                <img src="images/mars.png" alt="" width="480"/>
+                <div class="card_body" id="mars">
+                    <h1 class="card_title">MARS</h1>
+                    <p class="card_text">Mars, often referred to as the "Red Planet," has a thin atmosphere and surface features like  <br>
+                        volcanoes, valleys, deserts, and polar ice caps. It has long been a target for exploration due to the possibility 
+                        of past or present life.</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="jupiter">
+                <img src="images/Jupiter.png" alt="" width="444"/>
+                <div class="card_body" id="jupiter">
+                    <h1 class="card_title">JUPITER</h1>
+                    <p class="card_text">Jupiter is the largest planet in our solar system, known for its colorful bands of clouds and<br> 
+                        the iconic Great Red Spot—a giant storm. It has a strong magnetic field and many moons, including the four 
+                        largest: Io, Europa, Ganymede, and Callisto.</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="uranus">
+                <img src="images/uranus.png" alt="" width="430"/>
+                <div class="card_body" id="uranus">
+                    <h1 class="card_title">URANUS</h1>
+                    <p class="card_text">Uranus is an ice giant with a bluish color due to methane in its atmosphere. It has a unique 
+                        rotation axis, lying almost perpendicular to its orbit around the Sun, causing extreme seasonal variations.</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="moon">
+                <img src="images/moon.png" alt="" width="300"/>
+                <div class="card_body" id="moon">
+                    <h1 class="card_title">MOON</h1>
+                    <p class="card_text">
+                        The Moon orbits Earth, influencing tides and cultural beliefs. Its surface features craters, mountains,<br>
+                        and maria. Human exploration, like the Apollo missions, has advanced scientific understanding.</p>
+                </div>
+            </div>
+
+            <div class="card" data-name="neptune">
+                <img src="images/neptune.png" alt="" width="388"/>
+                <div class="card_body" id="neptune">
+                    <h1 class="card_title">NEPTUNE</h1>
+                    <p class="card_text">Neptune is the eighth and farthest planet from the Sun. It is a gas giant with a deep blue color 
+                        due to the presence of methane in its atmosphere. It has strong winds and a system of rings and moons, including 
+                        Triton, its largest moon.</p>
+                </div>
+            </div>
+            <div class="nasa-container"><!-- NASA information will appears here --></div>
         </div>
+    </div>
 
     </section>
     <!--Scrollreveal effect-->
@@ -55,5 +143,9 @@
     <!--Custom Js link-->
     <script src="scripts/interaction.js"></script>
 
+    <footer>
+        &copy; Steve Chrispin | 2024
+    </footer>
 </body>
+
 </html>
