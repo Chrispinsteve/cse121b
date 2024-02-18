@@ -11,13 +11,14 @@ header{
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 1000;
     width: 100%;
+    height: 10%;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 33px 9%;
-    background: transparent;
+    padding: 1px 9%;
+    background: linear-gradient(245.59deg, #1b3b70 0%, #192458 28.53%, #00112f 75.52%);;
 }
 
 .logo{
@@ -26,77 +27,123 @@ header{
     color: white;
 }
 
-.navlist{
+
+
+/* ---------------------Buttons----------------------------*/
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    padding: 20px;
+    margin: 50px auto;
+}
+
+.filter_buttons {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
-
-.navlist a{
-    color: white;
-    margin-left: 60px;
-    font-size: 15px;
-    font-weight: 600;
-    border-bottom: 2px solid transparent;
-    transition: all .55s ease;
-}
-
-.navlist a:hover {
-    border-bottom: 2px solid white;
-}
-
-#menu-icone{
-    color: white;
-    font-size: 34px;
-    z-index: 10001;
+button {
+    color: aliceblue;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 21px;
+    background: rgb(18, 67, 112);
+    border: #00112f;
     cursor: pointer;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.05);
+}
+
+button:active{
+    background: #f99727;
+    color: white;
+}
+
+.filterable_cards {
+    display: flex;
+    margin-top: 13px;
+    margin: 13%;
+    gap: 34px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 300px;
+    max-height:600px;
+    flex-basis: 450px;
+    background-color: #1b3c7063;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.05);
+}
+
+.card.hide{
     display: none;
 }
+
+
+.card body {
+    padding: 5px 8px 13px;
+}
+.card_title {
+    font-size: 30px;
+    font-weight: 890PX;
+    color: #00112f;  
+}
+
+.card_text {
+    font-size: 18px;
+    font-weight: 500px; 
+    color: #00112f;  
+}
+
+#jupiter {
+    margin-top: -69px;
+}
+
+#venus {
+    margin-top: -34px;
+}
+
+#uranus {
+    margin-top: 55px;
+}
+
+#mercure {
+    margin-top: 121px;
+}
+
+
 .hero{
     height: 100%;
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(245.59deg, #1b3b70 0%, #192458 28.53%, #00112f 75.52%);
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    grid-template-columns: repeat(3, 2fr);
     align-items: center;
     gap: 2rem;
 }
 
-section{
-    padding: 0 19%;
-}
 
-.hero-text h5{
-    font-family: font-family "Montserrat", sans-serif ;
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 40px;
-}
-.hero-text h1{
-    font-family: font-family "Montserrat", sans-serif ;
-    font-size: 90px;
-    line-height: 1;
-    color: white;
-    margin: 0 0 45px;
-}
-.hero-text h4{
-    font-family: font-family "Montserrat", sans-serif ;
-    font-size: 14px;
-    font-weight: 400;
-    color: white;
-    margin-bottom: 10px;
-}
-.hero-text p{
+.card_title{
     color: white;
     font-size: 15px;
     line-height: 1.9;
     margin-bottom: 40px;
 }
 
-.hero-img{
-    width: 700px;
-    height: auto;
+.card_text{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 1px;
+}
+
+.nasa-container{
+    color: white;
 }
 
 .hero-text a{
@@ -134,10 +181,6 @@ section{
     header{
         padding: 15px 3%;
         transition: .2s;
-    }
-    .icons{
-        padding: 0 3%;
-        transition: .2s
     }
 
     .scroll-down{
@@ -207,4 +250,60 @@ section{
     .navalist.open{
         right: 0;
     }
+}
+/*-------------------Search bar-------------------*/
+.searchbar{
+    width: 100%;
+    padding: 2%;
+    align-items: center;
+    display: flex;
+}
+
+.search-Bar{
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 3px 13px;
+    backdrop-filter: blur(4px) saturate(160%);
+}
+.search-Bar input{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px 13px;
+    font-size: 18px;
+    color: #cac7ff;
+    border-radius: 60px;
+}
+.search-Bar img{
+    width: 34px;
+}
+
+::placeholder{
+    color: aliceblue;
+}
+.search-Bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background: #58629b;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #0f345d;
+    color: #fff;
+    padding: 13px;
+    text-align: center;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
 }
