@@ -50,13 +50,15 @@ const sortBy = (temples, sortByOption) => {
     reset();
     switch (sortByOption) {
         case 'utah':
-            displayTemples(temples.filter(temple => temple.location.includes('Utah')));
+            temple =
+            displayTemples(temples.filter(temple => temple.location === 'Utah'));
             break;
         case 'notutah':
-            displayTemples(temples.filter(temple => temple.location.includes(!'Utah')));
+            displayTemples(temples.filter(temple => temple.location.includes('Utah')));
             break;
         case 'older':
-            displayTemples(temples.filter(temple => temple.location.includes('19')))
+            temples = temples.filter
+                (temple) => temple.location.includes <= '1950'
             break;
         default:
             displayTemples(temples);
