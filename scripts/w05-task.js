@@ -57,7 +57,16 @@ const sortBy = (temples, sortByOption) => {
             displayTemples(temples.filter(temple => !temple.location.includes('Utah')));
             break;
         case 'older':
-            displayTemples(temples.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1)));
+            const olderTemples = temples.filter(temple => {
+            // Parse the dedicated date string and create a Date object
+            const dedicatedDateArray = temple.dedicated.split(', ');
+            const dedicatedDate = new Date(`${dedicatedDateArray[0]} ${dedicatedDateArray[1]}, ${dedicatedDateArray[2]}`);
+
+            // Compare the dedicated date with January 1, 1950
+            const comparisonDate = new Date(1950, 0, 1);
+            return dedicatedDate < comparisonDate;
+            });
+            displayTemples(olderTemples);
             break;
         case 'all':
             displayTemples(temples);
