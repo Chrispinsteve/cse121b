@@ -48,21 +48,26 @@ function reset() {
 /* sortBy Function */
 const sortBy = (temples, sortByOption) => {
     reset();
+    let filteredTemples; // Declare a variable to hold the filtered result
+
     switch (sortByOption) {
         case 'utah':
-            const utahTemples = temples.filter(temple => temple.location.includes('Utah'))
+            filteredTemples = temples.filter(temple => temple.location.includes('Utah'));
             break;
         case 'notutah':
-            const notUtah = temples.filter(temple => !temple.location.includes('Utah'));
+            filteredTemples = temples.filter(temple => !temple.location.includes('Utah'));
             break;
         case 'older':
-            const older = temples.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1))
+            filteredTemples = temples.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1));
             break;
         default:
             displayTemples(temples);
-            break;
+            return; // Return here since no further processing is needed
     }
-}
+
+    // Display or further process the filtered result
+    displayTemples(filteredTemples);
+};
 
 /* Event Listener */
 document.getElementById('filtered').addEventListener('change', () => {
