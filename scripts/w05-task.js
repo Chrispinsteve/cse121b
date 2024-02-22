@@ -52,6 +52,12 @@ const sortBy = (temples, sortByOption) => {
         case 'utah':
             displayTemples(temples.filter(temple => temple.location.includes('Utah')));
             break;
+        case 'notutah':
+            displayTemples(temples.filter(temple => temple.location.includes('Outside of Utah')));
+            break;
+        case 'older':
+            displayTemples(temples.filter(temple => temple.location.includes('19')))
+            break;
         default:
             displayTemples(temples);
             break;
